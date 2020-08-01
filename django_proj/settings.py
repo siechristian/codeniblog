@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['codeniblog.herokuapp.com/', 'codenificentbg-cli.herokuapp.com', 'codenificentblog.herokuapp.com/', 'tioye.dev']
+ALLOWED_HOSTS = ['codeniblog.herokuapp.com/', 'codenificentbg-cli.herokuapp.com', 'codenificentblog.herokuapp.com/', 'tioye.life']
 
 
 # Application definition
