@@ -87,3 +87,8 @@ a.article-title:hover {
 .account-heading {
 	font-size: 2.5rem;
 }
+
+.post-link:hover {
+	color: var(--beige);
+	text-decoration: none;
+}
