@@ -16,6 +16,13 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+from botocore.client import Config
+s3 = boto3.resource(
+    's3',
+    aws_access_key_id='xxxxxx',
+    aws_secret_access_key='xxxxxx',
+    config=Config(signature_version='s3v4')
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
