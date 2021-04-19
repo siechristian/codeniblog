@@ -19,8 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 from botocore.client import Config
 s3 = boto3.resource(
     's3',
-    aws_access_key_id='xxxxxx',
-    aws_secret_access_key='xxxxxx',
+    aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY'),
     config=Config(signature_version='s3v4')
 )
 
@@ -152,8 +152,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('AppsEmail')
 EMAIL_HOST_PASSWORD = os.environ.get('AppsPass')
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
+
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
 AWS_S3_FILE_OVERWRITE = False
